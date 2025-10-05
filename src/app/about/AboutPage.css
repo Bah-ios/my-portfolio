@@ -1,0 +1,235 @@
+/* General Body/HTML defaults (if not already set globally) */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Consistent font */
+}
+
+/* Overall page wrapper to contain header and about section */
+.about-page-wrapper {
+  background-color: #fcebeb; /* Lighter pink background for the whole view */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Specific Styles */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px; /* Padding on sides */
+  height: 80px; /* Fixed height for the header */
+  background-color: #fff; /* White header background */
+  border-bottom: 1px solid #eee; /* Subtle separator line */
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px; /* Space between nav links */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #666; /* Default link color */
+  font-weight: 500;
+  padding-bottom: 5px; /* Space for underline */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #5d3fd3; /* Purple on hover */
+}
+
+.nav-link.active {
+  color: #5d3fd3; /* Active link color */
+  border-bottom: 2px solid #5d3fd3; /* Underline for active link */
+}
+
+.header-contact-button {
+  background-color: #fff;
+  color: #5d3fd3; /* Purple text */
+  border: 1px solid #5d3fd3; /* Purple border */
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-contact-button:hover {
+  background-color: #5d3fd3; /* Solid purple on hover */
+  color: #fff;
+}
+
+/* About Page Specific Styles - Revised to match image */
+.about-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center content within the container */
+  flex-grow: 1; /* Allows the container to fill remaining vertical space */
+  padding: 50px;
+  /* background-color: #fcebeb; -- Moved to .about-page-wrapper */
+  font-family: Arial, sans-serif;
+  gap: 80px;
+}
+
+.profile-image-section {
+  flex-shrink: 0;
+  width: 350px;
+  height: 350px;
+  /* background-color: #3f7de1; -- Not explicitly visible, image covers it */
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-me-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-me-header {
+  font-size: 48px;
+  font-weight: 800;
+  color: #333;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex; /* To align emoji and text nicely */
+  align-items: center; /* Vertically align */
+}
+
+.about-me-header .emoji-prefix { /* Using a span for the emoji */
+  font-size: 40px;
+  margin-right: 15px; /* Space between emoji and "About me" text */
+  position: relative;
+  top: 0px; /* Fine-tune vertical alignment if needed */
+  left: 0; /* Remove negative left from previous ::before */
+}
+
+/* Blue line before "About me" text, not the emoji */
+.about-me-header::before { /* Re-purposing ::before for the line */
+  content: '';
+  position: absolute;
+  left: 0; /* Align with the start of the "About me" text (after emoji) */
+  top: -15px; /* Position above text */
+  width: 50px;
+  height: 5px;
+  background-color: #5d3fd3; /* Purple line */
+  border-radius: 2px;
+  /* Adjust left position slightly to align with 'A' in About */
+  left: calc(0px + 40px + 15px); /* Emoji width + margin-right of emoji-prefix */
+}
+
+.about-me-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0px; /* Removed margin-bottom, using gap on parent */
+}
+
+.about-me-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.resume-button,
+.contact-button-alt {
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-button {
+  background-color: #5d3fd3; /* Purple background */
+  color: #fff;
+  border: 1px solid #5d3fd3;
+}
+
+.resume-button:hover {
+  background-color: #4a33a3; /* Darker purple on hover */
+  border-color: #4a33a3;
+}
+
+.contact-button-alt {
+  background-color: #fff;
+  color: #5d3fd3; /* Purple text */
+  border: 1px solid #dcdcdc; /* Light grey border */
+}
+
+.contact-button-alt:hover {
+  background-color: #f0f0f0; /* Light grey on hover */
+  border-color: #c0c0c0;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 992px) {
+  .about-page-container {
+    flex-direction: column; /* Stack image and text vertically */
+    gap: 40px; /* Reduce gap when stacked */
+    padding: 30px;
+  }
+
+  .profile-image-section {
+    width: 280px; /* Smaller image on smaller screens */
+    height: 280px;
+  }
+
+  .about-me-content {
+    text-align: center; /* Center text when stacked */
+    max-width: 100%;
+  }
+
+  .about-me-header {
+    justify-content: center; /* Center header content */
+  }
+
+  .about-me-header .emoji-prefix {
+     margin-right: 10px;
+  }
+
+  .about-me-header::before {
+    left: 50%; /* Center the line */
+    transform: translateX(-50%) translateX(20px); /* Adjust for emoji and 'About me' text width */
+  }
+
+  .about-me-buttons {
+    justify-content: center; /* Center buttons when stacked */
+  }
+
+  .main-header {
+    flex-direction: column; /* Stack header items */
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .header-nav {
+    gap: 15px;
+  }
+}

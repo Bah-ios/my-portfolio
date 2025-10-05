@@ -1,20 +1,6 @@
+/* Any other global styles you have can go below these */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can add custom global styles here, 
-  but keep it minimal when using Tailwind. 
-*/
-body {
-  font-family: 'Inter', sans-serif; /* Example of a global font setting */
-  /* Ensures no horizontal scrolling */
-  overflow-x: hidden; 
-}
-
-/* Example custom utility if needed */
-.portfolio-container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1.5rem; /* Equivalent to px-6 */
-}
+/* Any other global styles you have can go below these */
