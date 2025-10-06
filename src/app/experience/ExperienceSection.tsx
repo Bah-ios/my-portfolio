@@ -87,7 +87,7 @@ const ExperienceSection: React.FC = () => {
 
       <style jsx>{`
         .experience-section {
-          background: white;
+          background: #221e3eff;
           padding: 120px 0;
         }
 
@@ -104,7 +104,7 @@ const ExperienceSection: React.FC = () => {
         .experience-text h2 {
           font-size: 3rem;
           font-weight: 800;
-          color: #222;
+          color: #faf6f6ff;
         }
 
         .highlight-bar {
