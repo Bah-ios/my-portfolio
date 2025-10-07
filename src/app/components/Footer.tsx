@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         {/* Brand / Name */}
         <div className="footer-brand">
-          <h2>Your Name</h2>
+          <h2>Bahran Solomon Tadesse</h2>
           <p>A passionate developer crafting meaningful digital experiences.</p>
         </div>
 

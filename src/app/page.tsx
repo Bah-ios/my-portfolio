@@ -5,6 +5,8 @@ import React, { useEffect, useRef } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection';
+import PortfolioSection from './components/portfolioSection';
+
     // Define metadata for the page (Next.js feature)
     export const metadata = {
       title: 'Bahran | Portfolio',
@@ -19,6 +21,7 @@ import HeroSection from './components/HeroSection';
           {/* 1. Navigation/Header */}
           <Header />
           <HeroSection />
+          <PortfolioSection />
           <Footer />
         </main>
       );

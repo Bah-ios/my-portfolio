@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
         <div className="text-content">
           <p className="welcome-text">Welcome to my portfolio</p>
           <h1 className="hero-title">
-            Hi, I’m <span className="highlight">Your Name</span>
+            Hi, I’m <span className="highlight">Bahran </span>
           </h1>
           <h2 className="hero-subtitle">Creative Developer & Designer</h2>
           <p className="hero-description">
