@@ -1,21 +1,21 @@
+"use client";
 
-// Header.tsx
-import React from 'react';
-import './Header.css';
 import Link from "next/link";
-import ExperiencePage from '../experience/page';  
+import { usePathname } from "next/navigation";
+import "./header.css";
+
 const Header: React.FC = () => {
+  const pathname = usePathname();
+
   return (
     <header className="header-container">
       <div className="logo">Bahran Solomon</div>
 
-        <nav className="flex gap-6">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/experience">Experience</Link>
-          
-        </nav>
-
+      <nav className="nav-links">
+        <Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link>
+        <Link href="/about" className={pathname === "/about" ? "active" : ""}>About</Link>
+        <Link href="/experience" className={pathname === "/experience" ? "active" : ""}>Experience</Link>
+      </nav>
 
       <button className="contact-button">Contact</button>
     </header>

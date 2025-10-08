@@ -16,7 +16,7 @@ import PortfolioSection from './components/portfolioSection';
     // This is the main page component that assembles the UI
     export default function Home() {
       return (
-        <main className="min-h-screen bg-white pt-20"> {/* Add padding-top to account for fixed header */}
+        <main > {/* Add padding-top to account for fixed header */}
           
           {/* 1. Navigation/Header */}
           <Header />

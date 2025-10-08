@@ -1,10 +1,9 @@
-
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 2rem;
-  background: #fff;
+  background: #0D0D0D;
   box-shadow: 0 1px 8px rgba(0,0,0,0.07);
   position: sticky;
   top: 0;
@@ -15,15 +14,42 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #5a3ef2;
-  letter-spacing: 0.02em;
 }
 
-.flex {
+.nav-links {
   display: flex;
+  gap: 1.5rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
+.nav-links a {
+  color: #EEEEEE;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #00ADB5;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #5a3ef2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 
 .contact-button {
@@ -37,39 +63,8 @@
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .contact-button:hover {
   background: #5a3ef2;
   color: #fff;
-}
-
-nav.flex.gap-6 a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s;
-  position: relative;
-}
-nav.flex.gap-6 a:hover {
-  color: #5a3ef2;
-}
-
-@media (max-width: 700px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-  .logo {
-    margin-bottom: 0.5rem;
-  }
-  .contact-button {
-    margin-top: 0.5rem;
-    width: 100%;
-  }
-  nav.flex.gap-6 {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
 }
