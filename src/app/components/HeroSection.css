@@ -45,7 +45,7 @@
 }
 
 .hero-title .highlight {
-  color: #ec4899;
+  color: #38dff8;
 }
 
 .hero-subtitle {
@@ -76,13 +76,13 @@
 }
 
 .btn-primary {
-  background-color: #ec4899;
+  background-color: #2a84c1;
   color: white;
   text-decoration: none;
 }
 
 .btn-primary:hover {
-  background-color: #db2777;
+  background-color: #2890bc;
 }
 
 .btn-secondary {

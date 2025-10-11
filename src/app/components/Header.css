@@ -13,7 +13,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #5a3ef2;
+  color: #38bdf8;
 }
 
 .nav-links {
@@ -54,8 +54,8 @@
 
 .contact-button {
   background: transparent;
-  border: 2px solid #5a3ef2;
-  color: #5a3ef2;
+  border: 2px solid #d9f2fd;
+  color: #dbf4fe;
   border-radius: 9999px;
   padding: 0.5rem 1.5rem;
   font-weight: 600;
@@ -65,6 +65,6 @@
 }
 
 .contact-button:hover {
-  background: #5a3ef2;
+  background: #3e2ba5;
   color: #fff;
 }

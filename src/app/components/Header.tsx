@@ -4,7 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./header.css";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onContactClick: () => void;
+}
+const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
+
   const pathname = usePathname();
 
   return (
@@ -17,7 +21,9 @@ const Header: React.FC = () => {
         <Link href="/experience" className={pathname === "/experience" ? "active" : ""}>Experience</Link>
       </nav>
 
-      <button className="contact-button">Contact</button>
+       <button className="contact-button" onClick={onContactClick}>
+        Contact
+      </button>
     </header>
   );
 };
