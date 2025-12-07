@@ -30,15 +30,15 @@ const Footer: React.FC = () => {
         <div className="footer-socials">
           <h3>Connect</h3>
           <div className="footer-icons">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-            <a href="mailto:youremail@example.com"><FaEnvelope /></a>
+            <a href="https://github.com/bah-ios" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+            <a href="https://linkedin.com/in/Bahran-Solomon-Tadesse" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+            <a href="mailto:bahfeb69@gmail.com"><FaEnvelope /></a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Your Name. All rights reserved.
+        © {new Date().getFullYear()} Bahran Solomon Tadesse. All rights reserved.
       </div>
     </footer>
   );
