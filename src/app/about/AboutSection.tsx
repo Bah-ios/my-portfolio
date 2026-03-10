@@ -13,7 +13,7 @@ const AboutSection: React.FC = () => {
         {/* Profile image section */}
         <div className="profile-image-section">
           <Image
-            src="/IMG_3767 (1) - Copy.JPG" // Ensure this path is correct in your public/ folder
+            src="/profile.JPG" // Ensure this path is correct in your public/ folder
             alt="Bahran Solomon"
             width={350} // Matches CSS fixed width
             height={350} // Matches CSS fixed height
