@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import PortfolioSection from "./components/portfolioSection";
-import ContactModal from "./components/ContactModal";
-import ExperiencePage from "./experience/page";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import HeroSection from "./components/HeroSection/HeroSection";
+import PortfolioSection from "./components/projects/portfolioSection";
+import ContactModal from "./components/contactModal/ContactModal";
 import ExperienceSection from "./experience/ExperienceSection";
 
 export default function Home() {
+  
   const [showModal, setShowModal] = useState(false);
 
   return (

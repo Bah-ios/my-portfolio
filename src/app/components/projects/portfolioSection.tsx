@@ -8,8 +8,7 @@ const PortfolioSection = () => {
   const [loading, setLoading] = useState(true);
 
   const gridRef = useRef<HTMLDivElement | null>(null);
-
-  // Fetch projects from backend
+// Fetch projects from backend
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -69,11 +68,11 @@ const PortfolioSection = () => {
         {projects.map((project) => (
           <div className="portfolio-card" key={project._id}>
             <div className="portfolio-image-wrapper">
-              <img
-                src={project.image || "/placeholder.png"}
+              {/* <img
+                src={project.image || "/window.png"}
                 alt={project.title}
                 className="portfolio-image"
-              />
+              /> */}
             </div>
 
             <div className="portfolio-card-content">
